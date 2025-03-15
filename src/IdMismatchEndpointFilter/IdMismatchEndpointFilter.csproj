@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Kimmel.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Kimmel.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Minimal API Id Mismatch Endpoint Filter</Title>
+    <Authors>sweeperq</Authors>
+    <Copyright>©2025 Sam Kimmel</Copyright>
+    <PackageProjectUrl>https://github.com/sweeperq/IdMismatchEndpointFilter</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/sweeperq/IdMismatchEndpointFilter</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>AspNetCore; Minimal API; BadRequest</PackageTags>
+	<NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Description>Filter for simplifying id mismatches for PUT operations when using  .Net Minimal API. Utilizes IEndpointFilter a RouteHandlerBuilder extension method to reduce boilerplate code and force the id check to occur before any validation.</Description>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\LICENSE.txt">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+</Project>
